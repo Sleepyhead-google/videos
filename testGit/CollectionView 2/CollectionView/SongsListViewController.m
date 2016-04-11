@@ -77,6 +77,7 @@
     
     NSString *imgname = [NSString stringWithFormat:@"%ld.png",indexPath.row];
     imgview.image = [UIImage imageNamed:imgname];
+
     text.text = [NSString stringWithFormat:@"%@",songTitle[indexPath.row]];
     
     [cell addSubview:text];
@@ -93,6 +94,8 @@
     
     return cell;
 }
+
+
 
 
 
