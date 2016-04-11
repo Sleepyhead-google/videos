@@ -51,8 +51,7 @@
 
     [cview registerClass:[CollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
     [cview registerClass:[CollectionViewCell class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"reuseableview"];
-    cview.delegate = self;
-    cview.dataSource = self;
+
     [self.view addSubview:cview];
     
 
