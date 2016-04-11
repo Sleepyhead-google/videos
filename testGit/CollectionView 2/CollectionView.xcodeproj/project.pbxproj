@@ -268,6 +268,12 @@
 		A416836A1CB0A19200D2EFE6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A416835D1CB09A5100D2EFE6 /* YourOwnViewController.h */,
+				A416835E1CB09A5100D2EFE6 /* YourOwnViewController.m */,
+				A4EB10A11CB6AFDA00F93E82 /* VideoViewController.h */,
+				A4EB10A21CB6AFDA00F93E82 /* VideoViewController.m */,
+				A469C0841CBA9F020082CE36 /* UIImage+Video.h */,
+				A469C0851CBA9F020082CE36 /* UIImage+Video.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -282,12 +288,6 @@
 		A416836C1CB0A19F00D2EFE6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A416835D1CB09A5100D2EFE6 /* YourOwnViewController.h */,
-				A416835E1CB09A5100D2EFE6 /* YourOwnViewController.m */,
-				A4EB10A11CB6AFDA00F93E82 /* VideoViewController.h */,
-				A4EB10A21CB6AFDA00F93E82 /* VideoViewController.m */,
-				A469C0841CBA9F020082CE36 /* UIImage+Video.h */,
-				A469C0851CBA9F020082CE36 /* UIImage+Video.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
