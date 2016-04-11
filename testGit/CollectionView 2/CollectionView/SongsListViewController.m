@@ -30,12 +30,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    songTitle = @[@"1",@"12",@"13",@"111",@"123",@"31",@"122",@"51"];
-
-//    self.navigationItem.title = @"全部歌单";
     
     songTitle = [NSArray arrayWithObjects:@"黄致列",@"Adele",@"BIGBANG",@"巴赫",@"赵传",@"齐秦",@"张信哲",@"Rihanna",@"P!nk",@"Beyoncé",@"Lady Gaga",@"那英", nil];
-//    songSrc = [NSArray arrayWithObjects:@"10","0","0",@"0",@"0", nil];
+
     UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
 
     flow.scrollDirection = UICollectionViewScrollDirectionVertical;
@@ -70,30 +67,23 @@
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *cellIdentifier = @"cell";
-//    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
-   
-    
     parWidth = cell.frame.size.width;
-    imgviewWidth = parWidth/1.2;
-    
-    cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
-    
-    NSInteger num = [indexPath row];
+    cell = (CollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
 
-    for (int i = 0; i < num; i++) {
-        
-        imgview = [[UIImageView alloc] initWithFrame:CGRectMake((parWidth-imgviewWidth)/2, 0, imgviewWidth, 70)];
-        imgview.image = [UIImage imageNamed:@"music"];
-        text = [[UILabel alloc] initWithFrame:CGRectMake(0, 70, parWidth, 30)];
-        text.text = [songTitle objectAtIndex:num];
-        text.textAlignment = NSTextAlignmentCenter;
-        [cell addSubview:text];
-        [cell addSubview:imgview];
-        
-    }
+    imgview = [[UIImageView alloc] initWithFrame:CGRectMake(25, 0, 70, 70)];
+    text = [[UILabel alloc] initWithFrame:CGRectMake(25, 70, 70, 30)];
+    text.textAlignment = NSTextAlignmentCenter;
+    
+    
+    NSString *imgname = [NSString stringWithFormat:@"%ld.png",indexPath.row];
+    imgview.image = [UIImage imageNamed:imgname];
+    text.text = [NSString stringWithFormat:@"%@",songTitle[indexPath.row]];
+    
+    [cell addSubview:text];
+    [cell addSubview:imgview];
     
     [cell addSubview:[self getUrlImage]];
-  
+    
     [cell sizeToFit];
     cell.layer.cornerRadius = 10.0;
     cell.layer.borderWidth = 5.0;

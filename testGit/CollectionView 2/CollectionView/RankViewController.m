@@ -36,7 +36,7 @@
     scrollView.delegate = self;
     scrollView.backgroundColor = [UIColor redColor];
     scrollView.contentSize = CGSizeMake(CGRectGetWidth(self.view.frame)*2, 400);
-    scrollView.userInteractionEnabled = YES;
+//    scrollView.userInteractionEnabled = YES;
     scrollView.showsHorizontalScrollIndicator = YES;
     scrollView.showsVerticalScrollIndicator = YES;
     [self.view addSubview:scrollView];
